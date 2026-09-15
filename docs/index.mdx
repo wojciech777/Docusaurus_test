@@ -1,0 +1,64 @@
+# Orion Platform 4.2 LTS
+
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarSiblings} from '@docusaurus/plugin-content-docs/client';
+
+Orion Platform handles orders, payments, and events for online stores and
+marketplaces. This documentation covers release **4.2 LTS** (latest patch
+release **4.2.1**) and spans installation, configuration, API integration, and
+day-to-day operations in production.
+
+:::info[Sample content]
+
+Everything in this documentation set, including the product, the company,
+the hostnames, the versions, and the error codes, is **fictional**. The set
+exists as a multi-level example project built with Docusaurus and its classic
+theme.
+:::
+
+## Where to start
+
+<DocCardList
+  items={useCurrentSidebarSiblings().filter((item) => item.type === 'category')}
+/>
+
+## What's in the docs
+
+| Section | Contents | Audience |
+| --- | --- | --- |
+| [Introduction](introduction/index.mdx) | Product scope, architecture, glossary | Everyone |
+| [Getting started](getting-started/index.mdx) | Requirements, installation, configuration, tutorial | Administrators, integrators |
+| [Guides](guides/index.mdx) | Authentication, events, migrations, multi-tenancy | Integrators, architects |
+| [API](api/index.mdx) | REST, webhooks, SDKs, error codes | Integration developers |
+| [Operations](operations/index.mdx) | Observability, backups, runbooks | SRE, administrators |
+| [Help](faq.mdx) | FAQ, changelog, contact | Everyone |
+
+## Highlights in 4.2
+
+- Cursor pagination is the default for every collection. See
+  [Pagination, filtering, and sorting](api/rest/pagination.mdx).
+- New `v2` webhook signature format (HMAC-SHA256); the `v1` signature is
+  deprecated. See [Signature verification](api/webhooks/signature-verification.mdx).
+- Kubernetes operator with the `OrionCluster` resource in version `v1alpha2`.
+  See [Install with the operator](getting-started/installation/kubernetes/operator.mdx).
+- Tenant isolation backed by RLS policies in PostgreSQL. See
+  [Multi-tenancy](guides/multi-tenancy.mdx).
+
+The [changelog](changelog.mdx) lists every change, including breaking ones. If
+you are upgrading from 3.8 LTS, work through the
+[migration guide](guides/migrations/from-3-8-to-4-2.mdx).
+
+## Releases and support
+
+| Release | Status | Supported until |
+| --- | --- | --- |
+| 4.2 LTS | Recommended | 2027-06-30 |
+| 4.0 | Security fixes only | 2026-09-30 |
+| 3.8 LTS | End of life | 2026-03-31 |
+
+:::tip[Need help?]
+
+Check the [FAQ](faq.mdx) first. If that does not resolve the problem, get in
+touch. The [Support](support.mdx) page lists the contact channels and
+response times.
+:::
