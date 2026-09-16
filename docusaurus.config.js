@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Orion Platform 4.2 LTS',
   tagline: 'Orders, payments, and events for stores and marketplaces',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -95,6 +95,7 @@ const config = {
         logo: {
           alt: 'Orion Platform Logo',
           src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg',
         },
         items: [
           {
