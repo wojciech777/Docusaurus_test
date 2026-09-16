@@ -78,6 +78,10 @@ npm start -- --port 8000 --host 0.0.0.0   # different address and port
 npm start -- --open                       # open the browser right away
 ```
 
+Search is the one feature the development server cannot show: the index is
+written in the `postBuild` step, so use `npm run build && npm run serve` to try
+it out.
+
 ## Building the static site
 
 ```bash
@@ -119,6 +123,9 @@ This project additionally configures:
 - an explicit navigation tree in `sidebars.js`, collapsed to the first level,
   where every section has its own overview page,
 - Mermaid diagram rendering (`@docusaurus/theme-mermaid`),
+- offline search (`@easyops-cn/docusaurus-search-local`): the lunr index is
+  generated during `npm run build` and shipped as a static file, so search runs
+  entirely in the visitor's browser and no query leaves it,
 - Prism syntax highlighting extended with Java, Kotlin, INI, TOML, PowerShell,
   HTTP, and PromQL,
 - "Edit this page" links pointing at the `master` branch on GitHub.
