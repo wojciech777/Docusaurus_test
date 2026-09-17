@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="Orion Platform">
+  <rect width="40" height="40" rx="9" fill="#4e89f0"/>
+  <path d="M11 29 29 11" stroke="#fff" stroke-width="1.2" stroke-opacity=".4" stroke-linecap="round"/>
+  <g fill="#fff">
+    <path d="M11 23.8 12.456 27.544 16.2 29 12.456 30.456 11 34.2 9.544 30.456 5.8 29 9.544 27.544Z"/>
+    <path d="M20 14.8 21.456 18.544 25.2 20 21.456 21.456 20 25.2 18.544 21.456 14.8 20 18.544 18.544Z"/>
+    <path d="M29 5.8 30.456 9.544 34.2 11 30.456 12.456 29 16.2 27.544 12.456 23.8 11 27.544 9.544Z"/>
+  </g>
+</svg>
