@@ -101,6 +101,31 @@ npm run serve
 
 `npm start` is a development server and is not meant for production.
 
+### Opening the output through the IDE web server
+
+The site is built for one absolute URL prefix (`baseUrl`), so the `build/`
+output only works when it is served at the root of a domain. Opening
+`build/index.html` through the built-in web server of IntelliJ IDEA or WebStorm
+serves it from `/<project-name>/build/` instead, and Docusaurus reports a
+`baseUrl` mismatch.
+
+For that case, build the second variant:
+
+```bash
+npm run build:local
+```
+
+It uses `docusaurus.local.config.js`, which reuses the whole configuration and
+only overrides `baseUrl` to `/Docusaurus_test/build-local/` (plus
+`trailingSlash: true`, so every route resolves to a directory with an
+`index.html`). The output lands in `build-local/`, which is ignored by Git.
+
+Open it at
+`http://localhost:63342/Docusaurus_test/build-local/index.html`. If the project
+directory in the IDE has a different name, change the prefix in
+`docusaurus.local.config.js` to match. Opening the files straight from disk with
+a `file://` URL cannot work: Docusaurus resolves assets from absolute paths.
+
 ## Publishing
 
 `.github/workflows/docs.yml` builds the site and publishes it to GitHub Pages on

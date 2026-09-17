@@ -4,6 +4,9 @@
 # Production
 /build
 
+# Output of `npm run build:local` (built for the IDE web server URL prefix)
+/build-local
+
 # Generated files
 .docusaurus
 .cache-loader
